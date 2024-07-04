@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:3000/css/estilosTabla.css">
+    <title>Mostrar Productos</title>
+</head>
+<body>
+    <br>
+    <h1 style="text-align: center;">Tabla de Productos</h1>
+    <br>
+    <div class="contenedor">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Codigo</th>
+                <th>Descripción</th>
+                <th>Costo</th>
+                <th>Editar / Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productosCorrectos.forEach(producto => { %>
+            <tr>
+                <td><%= producto.idproducto %></td>
+                <td><%= producto.nombre %></td>
+                <td><%= producto.codigo %></td>
+                <td><%= producto.descripcion %></td>
+                <td><%= producto.costo %></td>
+                <td>
+                    <a href="/editarProducto/<%= producto.idproducto %>">Editar / </a>
+                    <a href="/borrarProducto/<%= producto.idproducto %>">Borrar</a>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form{
+   /* display: flex;
+    flex-direction: column;*/
+    width: 300px;
+    box-shadow: 0 0 20px rgb(83, 99, 96);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+label{
+    margin-top: 10px;
+}
+
+input{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(44, 65, 61);
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid black;
+    width: 80%;
+}
+
+button{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgb(44, 65, 61);
+    border: 0px;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 85%;
+}
+button:hover{
+    background-color: rgb(64, 85, 81);
+    color: rgb(58, 57, 57);
+}
+h1{
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorNombre, .errorCelular, .errorCorreo{
+    font-size: small;
+    color: red;
+}
+
+.errorInput{
+    background-color: rgb(240, 180, 180);
+    border: 2px solid rgb(138, 7, 7);
+}
+.xmarkErrorNombre, .xmarkErrorCelular, .xmarkErrorCorreo{
+    color: red;
+}
+.ocultar{
+    display: none;
+    visibility: hidden;
+}
+.correctoInput{
+    background-color: rgb(169, 231, 144);
+    border: 2px solid rgb(1, 156, 1);
+}
+.checkMarkNombre, .checkMarkCelular, .checkMarkCorreo{
+    color: green;
+}

@@ -1,0 +1,31 @@
+
+
+<%- include("templates/encabezado") %>
+    <h1>Editar Producto: </h1>
+    <div class="contenedor">
+        <form action="/editarProducto" method="post" id="formulario">
+            <input type="hidden" autofocus value="<%= idproducto %>" name="idproducto" id="idproducto" type="text" placeholder="id">
+            <label for="producto">Nombre:</label><span class="ocultar errorNombre">producto no valido</span>
+            <input autofocus value="<%= nombre %>" name="nombre" id="nombre" type="text" placeholder="Nombre">
+            <i class="ocultar xmarkErrorNombre fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkNombre fa-regular fa-circle-check"></i>
+
+            <label for="codigo">Codigo:</label><span class="ocultar errorNombre">codigo no valido</span>
+            <input value="<%= codigo %>" name="codigo" id="codigo" type="text" placeholder="Codigo">
+            <i class="ocultar xmarkErrorNombre fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkNombre fa-regular fa-circle-check"></i>
+
+            <label for="descripcion">Descripcion: </label><span class="ocultar errorCelular">descripcion no valido</span>
+            <input value="<%= descripcion %>" name="descripcion" id="descripcion" type="text" placeholder="Descripcion">
+            <i class="ocultar xmarkErrorCelular fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCelular fa-regular fa-circle-check"></i>
+
+            <label for="costo">Costo: </label><span class="ocultar errorCorreo">costo no valido</span>
+            <input value="<%= costo %>" name="costo" id="costo" type="text" placeholder="Costo">
+            <i class="ocultar xmarkErrorCorreo fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCorreo fa-regular fa-circle-check"></i>
+            <button type="submit">Editar datos</button>
+        </form>
+    </div>
+
+    <%- include("templates/pie") %>
